@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 20px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>js projects planning yourself</h1>
+  
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  padding: 25px;
+  background-color: gray;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+<div>
+<button  style="text-shadow:.5px .9px; border-radius:30px; display: flex;"onclick="myFunction1()"> Dark mode</button>
+
+<script>
+function myFunction1() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+</div>
+<div><h1 id="heya" style="text-transform: capitalize;text-align: center;text-shadow: 2px 1px; color:pink;">this will show you the time </h1>
+<script type="text/javascript">// what did i do nothing just used the css html till now ab mai ek variable initialise kardunga taki usko hum timing events ke saath khel paaye setinterval continuous repeat karta hai khud ko vahi set timeout ek baar hi batata hai 
+	var raghav = setInterval(huh,4000);// idhar humne ek function define kiyahai huh firr 4000 jo hai vo millisecond hai iska format yaa syantax hi isi prakar kaa hota hai 
+	function huh(){
+		var d = new Date();// idhar humne bataya ki samay kaise lena hai
+		document.getElementById("heya").innerHTML = d.toLocaleTimeString();// id call ki localestring se humne time ko display kara diya baddiya ekdum
+	}
+</script></div>
+<!DOCTYPE html>
+<html>
+<body>
+
+<div>
+<address onclick="myFunction()" style="color: cyan; background-color: blue; border-radius:40px; ">  what's your name click here and start planning </address>
+
+<p id="demo" onclick="myFunction()" ></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("Please enter your name:", " ");
+  if (person == null || person == "") {
+    txt = "hey whta's up.";
+  } else {
+    txt = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+</div>
+</body>
+</html>
+
+<div>
+	<div class="container">
+		<div class="row">
+			<div class="intro col-12">
+				<h1 style="text-transform: capitalize;text-shadow: 1px 2px; text-decoration: none; text-align:center; display:flex;"> To-Do list</h1>
+				<div>
+					<div class="border1"></div>
+					<div c
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="helpText col-12">
+				<p id="first">Enter what's in your mind .</p>
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<input id="userInput" type="text" placeholder="New item..." maxlength="27">
+				<button id="enter"><i class="fas fa-pencil-alt"></i> click</button>
+			</div>
+		</div>
+
+		<!-- Empty List -->
+		<div class="row">
+			<div class="listItems col-12">
+				<ul class="col-12 offset-0 col-sm-8 offset-sm-2">
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="script_method3.js"></script>
+    </div>
+<style type="text/css">
+.intro {
+	margin: 30px 0px;
+	font-weight: bold;
+}
+
+h1 {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+p {
+	font-weight: 600;
+}
+
+#first {
+	margin-top: 10px;
+	color: purple;
+}
+
+
+
+
+#enter {
+	border: 120px;
+	padding: 5px 15px;
+	border-radius: 25px;
+	color: pink;
+	background-color: #025F70;
+	transition: all 0.75s ease;
+	
+	font-weight: normal;
+}
+
+#enter:hover{
+	background-color: #02798F;
+	color: #FFCD5D;
+}
+
+ul {
+	text-align: left;
+	margin-top: 20px;
+}
+
+
+li {
+	list-style: none;
+	padding: 10px 20px;
+	color: #ffffff;
+	text-transform: capitalize;
+	font-weight: 600;
+	border: 2px solid #025f70;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	background: #4EB9CD;
+	transition: all 0.75s ease;
+	
+}
+
+li:hover {
+	background: #76CFE0;
+}
+
+li > button {
+	font-weight: normal;
+	background: none;
+	border: none;
+	float: right;
+	color: #025f70;
+	font-weight: 800;
+}
+
+input {
+	border-radius: 5px;
+	min-width: 65%;
+	padding: 5px;
+	border: none;
+}
+
+
+.done {
+	background: #51DF70 !important;
+	color: #00891E;
+}
+
+.delete {
+	display: none;
+}
+</style>
+<script type="text/javascript">var enterButton = document.getElementById("enter");
+var input = document.getElementById("userInput");
+var ul = document.querySelector("ul");
+var item = document.getElementsByTagName("li");
+
+function inputLength(){
+	return input.value.length;
+} 
+
+function listLength(){
+	return item.length;
+}
+
+function createListElement() {
+	var li = document.createElement("li"); // creates an element "li"
+	li.appendChild(document.createTextNode(input.value)); //makes text from input field the li text
+	ul.appendChild(li); //adds li to ul
+	input.value = ""; //Reset text input field
+
+
+	//START STRIKETHROUGH
+	// because it's in the function, it only adds it for new items
+	function crossOut() {
+		li.classList.toggle("done");
+	}
+
+	li.addEventListener("click",crossOut);
+	//END STRIKETHROUGH
+
+
+	// START ADD DELETE BUTTON
+	var dBtn = document.createElement("button");
+	dBtn.appendChild(document.createTextNode("X"));
+	li.appendChild(dBtn);
+	dBtn.addEventListener("click", deleteListItem);
+	// END ADD DELETE BUTTON
+
+
+	//ADD CLASS DELETE (DISPLAY: NONE)
+	function deleteListItem(){
+		li.classList.add("delete")
+	}
+	//END ADD CLASS DELETE
+}
+
+
+function addListAfterClick(){
+	if (inputLength() > 0) { //makes sure that an empty input field doesn't create a li
+		createListElement();
+	}
+}
+
+function addListAfterKeypress(event) {
+	if (inputLength() > 0 && event.which ===13) { //this now looks to see if you hit "enter"/"return"
+		//the 13 is the enter key's keycode, this could also be display by event.keyCode === 13
+		createListElement();
+	} 
+}
+
+
+enterButton.addEventListener("click",addListAfterClick);
+
+input.addEventListener("keypress", addListAfterKeypress);
+</script>
+
+
+</body>
+</html>
+
+
+
+</body>
+</html>
